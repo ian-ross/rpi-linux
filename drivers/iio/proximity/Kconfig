@@ -68,6 +68,20 @@ config RFD77402
 	  To compile this driver as a module, choose M here: the
 	  module will be called rfd77402.
 
+config SEN0208
+	tristate "GPIO bitbanged ultrasonic ranger sensor (SEN0208)"
+	depends on GPIOLIB
+	help
+	  Say Y here to build a driver for GPIO bitbanged ultrasonic
+	  ranger sensor. This driver can be used to measure the distance
+	  of objects. It provides the distance as one-way travel time in
+	  nanoseconds. It uses two GPIOs.
+	  Actually Supported types are:
+	  - SFRobot SEN0208
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called sen0208.
+
 config SRF04
 	tristate "GPIO bitbanged ultrasonic ranger sensor (SRF04, MB1000)"
 	depends on GPIOLIB
